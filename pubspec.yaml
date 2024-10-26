@@ -1,15 +1,13 @@
 name: statbotics
-description: A starting point for Dart libraries or applications.
+description: A library for interacting with Statbotics data in dart.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/DanPeled/statbotics-dart/
 
 environment:
   sdk: ^3.5.4
 
-# Add regular dependencies here.
 dependencies:
   http: ^1.2.2
-  # path: ^1.8.0
 
 dev_dependencies:
   lints: ^4.0.0
