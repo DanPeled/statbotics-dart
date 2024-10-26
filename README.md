@@ -1,4 +1,4 @@
-A library for interacting with [Statbotics][https://www.statbotics.io/] data for FRC
+A library for interacting with [Statbotics](https://www.statbotics.io/) data for FRC
 
 ## Features
 - Getting team data
@@ -8,6 +8,4 @@ A library for interacting with [Statbotics][https://www.statbotics.io/] data for
 
 ## Usage
 Basic usage is handled through the `Statbotics` static class that will handle all the http requests for you with no additional setup.
-
-## Contributing
 Follow the instructions here: [contributing](CONTRIBUTING.md).
