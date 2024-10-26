@@ -22,9 +22,9 @@ Alternatively, your editor might support dart pub get. Check the docs for your e
 
 ### Import it
 Now in your Dart code, you can use:
-
+```dart
 import 'package:statbotics/statbotics.dart';
-
+```
 ## Usage
 Basic usage is handled through the `Statbotics` static class that will handle all the http requests for you with no additional setup.
 Follow the instructions here: [contributing](CONTRIBUTING.md).
