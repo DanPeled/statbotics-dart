@@ -1,6 +1,6 @@
 name: statbotics
-description: A library for interacting with Statbotics data in dart.
-version: 1.0.0
+description: Statbotics is a Dart library designed to provide developers with an intuitive interface to access and interact with Statbotics data. This library simplifies the process of retrieving detailed information about team performance, event outcomes, and historical data by offering efficient methods to make HTTP requests to the Statbotics API.
+version: 1.0.1
 repository: https://github.com/DanPeled/statbotics-dart/
 
 environment:

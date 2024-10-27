@@ -1,28 +1,70 @@
 import 'package:statbotics/src/cast.dart';
 import 'package:statbotics/src/data_stractures/stb_epa.dart';
 
+/// A class representing an event with details such as location,
+/// dates, type, and performance metrics.
 class Event {
+  /// Unique key identifying the event.
   final String key;
+
+  /// The year the event took place.
   final int year;
+
+  /// The name of the event.
   final String name;
+
+  /// The timestamp of the event start time.
   final int time;
+
+  /// The country where the event took place.
   final String country;
+
+  /// The state where the event took place.
   final String state;
+
+  /// The district associated with the event.
   final String district;
+
+  /// The start date of the event in YYYY-MM-DD format.
   final String startDate;
+
+  /// The end date of the event in YYYY-MM-DD format.
   final String endDate;
+
+  /// The type of the event.
   final String type;
+
+  /// The week number in which the event occurs.
   final int week;
+
+  /// Indicates if the event is an offseason event.
   final bool offseason;
+
+  /// The video URL associated with the event.
   final String video;
+
+  /// The status of the event.
   final String status;
+
+  /// A string representation of the event status.
   final String statusStr;
+
+  /// The number of teams participating in the event.
   final int numTeams;
+
+  /// The current match number at the event.
   final int currentMatch;
+
+  /// The total number of qualification matches.
   final int qualMatches;
+
+  /// An [Epa] object containing EPA (Estimated Performance Average) data for the event.
   final Epa epa;
+
+  /// Additional performance and event metrics stored in a map.
   final Map<String, dynamic> metrics;
 
+  /// Constructs an [Event] instance with the specified details.
   Event({
     required this.key,
     required this.year,
@@ -46,6 +88,11 @@ class Event {
     required this.metrics,
   });
 
+  /// Creates an [Event] instance from a JSON [Map].
+  ///
+  /// The [json] parameter should contain keys corresponding to each
+  /// field in the [Event] class. If any key is missing, a default
+  /// value is assigned to the respective field.
   factory Event.fromJson(Map<String, dynamic> json) {
     return Event(
       key: tryCast(json['key']) ?? 'Unknown Event',
