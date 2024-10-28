@@ -28,7 +28,7 @@ class Team {
   final bool active;
 
   /// The team's primary and secondary colors.
-  final Colors colors;
+  final TeamColors colors;
 
   /// The team's match record for the current and full season.
   final Record record;
@@ -62,7 +62,7 @@ class Team {
       rookieYear: tryCast(json['rookie_year']) ?? 0,
       offseason: tryCast(json['offseason']) ?? false,
       active: tryCast(json['active']) ?? false,
-      colors: Colors.fromJson(json['colors']),
+      colors: TeamColors.fromJson(json['colors']),
       record: Record.fromJson(json['record']),
       normEpa: Epa.fromJson(json['norm_epa']),
     );
@@ -87,27 +87,27 @@ class Team {
 }
 
 /// Represents the primary and secondary colors associated with a team.
-class Colors {
+class TeamColors {
   /// The primary color for the team.
   final String? primary;
 
   /// The secondary color for the team.
   final String? secondary;
 
-  Colors({
+  TeamColors({
     this.primary,
     this.secondary,
   });
 
-  /// Creates a [Colors] instance from a JSON [Map].
-  factory Colors.fromJson(Map<String, dynamic> json) {
-    return Colors(
+  /// Creates a [TeamColors] instance from a JSON [Map].
+  factory TeamColors.fromJson(Map<String, dynamic> json) {
+    return TeamColors(
       primary: tryCast(json['primary']),
       secondary: tryCast(json['secondary']),
     );
   }
 
-  /// Converts the [Colors] instance to a JSON [Map].
+  /// Converts the [TeamColors] instance to a JSON [Map].
   Map<String, dynamic> toJson() {
     return {
       'primary': primary,
